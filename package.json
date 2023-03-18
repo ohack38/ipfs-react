@@ -13,6 +13,7 @@
     "@ceramicnetwork/3id-did-resolver": "^2.13.0",
     "@ceramicnetwork/http-client": "^2.17.0",
     "dids": "^3.4.0",
+    "key-did-provider-ed25519": "^3.0.0",
     "key-did-resolver": "^2.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
