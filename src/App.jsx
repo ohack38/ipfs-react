@@ -2,16 +2,29 @@ import React, { useState } from 'react';
 
 import './App.css'
 
-import { tryAuthenticate } from './auth'
+import { didId } from './auth'
+import Feed from './components/feed/Feed';
 
 function App() {
 
-//    const [walletConnected, setWalletConnected] = useState(false);
+    const [wallet, setWallet] = useState({
+        did: ""
+    });
 
+    const connectWallet = () => {
+        const did = didId
+        if (did != "") {
+            setWallet({ did: did })
+            console.log(did)
+        }
+    }
     return (
         <div className="App">
             <div className='navbar'>
-                <button onClick={tryAuthenticate}>Connect Wallet</button>
+                {wallet.did == ""
+                    ? <button onClick={connectWallet}>Connect Wallet</button>
+                    : <Feed activeDid={wallet.did} />
+                }
             </div>
         </div>
     )
