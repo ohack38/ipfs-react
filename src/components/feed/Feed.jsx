@@ -10,7 +10,7 @@ const Feed = ({ activeDid }) => {
 
     return (
         <div>
-            <h1> Hello {activeDid}, this is your feed </h1>
+            <h3> Hello {activeDid}, this is your feed </h3>
             {posts.map(post => (
                 <FeedItem post={post} />
             ))}
